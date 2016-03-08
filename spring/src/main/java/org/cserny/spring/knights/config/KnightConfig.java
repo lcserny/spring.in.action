@@ -7,11 +7,13 @@ import org.cserny.spring.knights.SlayDragonQuest;
 import org.cserny.spring.knights.service.Minstrel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * Created by user on 03.03.2016.
  */
 @Configuration
+@EnableAspectJAutoProxy
 public class KnightConfig
 {
     @Bean
@@ -30,5 +32,11 @@ public class KnightConfig
     public Minstrel minstrel()
     {
         return new Minstrel(System.out);
+    }
+
+    @Bean
+    public KnightAspect knightAspect()
+    {
+        return new KnightAspect();
     }
 }
