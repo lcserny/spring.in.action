@@ -1,5 +1,6 @@
 package org.cserny.spring.knights;
 
+import org.cserny.spring.knights.service.Minstrel;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

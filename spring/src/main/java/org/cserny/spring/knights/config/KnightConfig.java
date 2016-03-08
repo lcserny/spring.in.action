@@ -4,6 +4,7 @@ import org.cserny.spring.knights.BraveKnight;
 import org.cserny.spring.knights.Knight;
 import org.cserny.spring.knights.Quest;
 import org.cserny.spring.knights.SlayDragonQuest;
+import org.cserny.spring.knights.service.Minstrel;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -23,5 +24,11 @@ public class KnightConfig
     public Quest quest()
     {
         return new SlayDragonQuest(System.out);
+    }
+
+    @Bean
+    public Minstrel minstrel()
+    {
+        return new Minstrel(System.out);
     }
 }

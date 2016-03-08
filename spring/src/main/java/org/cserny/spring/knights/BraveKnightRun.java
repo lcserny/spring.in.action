@@ -11,10 +11,10 @@ public class BraveKnightRun
 {
     public static void main(String[] args)
     {
-//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.register(KnightConfig.class);
-        context.refresh();
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+//        context.register(KnightConfig.class);
+//        context.refresh();
 
         Knight knight = context.getBean(Knight.class);
         knight.embarkOnQuest();

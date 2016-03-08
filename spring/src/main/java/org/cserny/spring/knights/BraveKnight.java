@@ -1,5 +1,7 @@
 package org.cserny.spring.knights;
 
+import org.cserny.spring.knights.service.Minstrel;
+
 /**
  * Created by user on 03.03.2016.
  */
